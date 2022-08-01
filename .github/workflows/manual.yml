@@ -8,8 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - uses: actions/setup-node@main
-      - run: sudo apt update
-      - run: sudo apt install ffmpeg
       - run: npm i
       - name: create env file
         run: |
