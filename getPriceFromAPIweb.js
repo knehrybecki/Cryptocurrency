@@ -55,4 +55,4 @@ app.listen(port, () => {
 setTimeout(() => {
     // eslint-disable-next-line no-undef
     process.exit()
-}, 5000)
+}, 10000)
