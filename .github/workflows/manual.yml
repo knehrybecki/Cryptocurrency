@@ -15,7 +15,7 @@ jobs:
         run: |
           touch .env
           echo CRYPTOCURRENCY_API_KEY=${{ secrets.CRYPTOCURRENCY_API_KEY }} >> .env
-      - run: node getPriceFromAPIweb.j
+      - run: node getPriceFromAPIweb.js
       - run: npm run build
         env:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}
