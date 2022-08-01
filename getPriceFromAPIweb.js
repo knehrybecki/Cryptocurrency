@@ -52,7 +52,7 @@ app.listen(port, () => {
     console.log(`Example app listening on port ${ port }`)
 })
 
-setTimeout(() => {
-    // eslint-disable-next-line no-undef
-    process.exit()
-}, 10000)
+// setTimeout(() => {
+//     // eslint-disable-next-line no-undef
+//     process.exit()
+// }, 10000)
