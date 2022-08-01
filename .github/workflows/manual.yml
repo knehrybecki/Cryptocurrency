@@ -22,7 +22,6 @@ jobs:
       - uses: actions/setup-node@main
       - run: sudo apt update
       - run: sudo apt install ffmpeg
-      - run: npm i
       - run: npm run build
         env:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}
