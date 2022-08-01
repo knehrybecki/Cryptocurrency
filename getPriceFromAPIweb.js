@@ -26,7 +26,7 @@ const runScript = async () => {
             const xrp = data.data.XRP.quote.PLN.price.toLocaleString().replace(',', ' ').slice(0, -1)
             const doge = data.data.DOGE.quote.PLN.price.toLocaleString().replace(',', ' ').slice(0, -1)
             const ada = data.data.ADA.quote.PLN.price.toLocaleString().replace(',', ' ').slice(0, -1)
-
+    
             return {
                 'BTC': btc,
                 'ETH': eth,
@@ -46,13 +46,15 @@ app.get('/price', (req, res) => {
     runScript().then(data => {
         res.json(data)
     })
-    setTimeout(() => {
-        // eslint-disable-next-line no-undef
-        process.exit()
-    }, 5000)
+  
 
 })
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${ port }`)
 })
+
+setTimeout(() => {
+    // eslint-disable-next-line no-undef
+    process.exit()
+}, 5000)
