@@ -46,6 +46,11 @@ app.get('/price', (req, res) => {
     runScript().then(data => {
         res.json(data)
     })
+    setTimeout(() => {
+        // eslint-disable-next-line no-undef
+        process.exit()
+    }, 5000)
+
 })
 
 app.listen(port, () => {
