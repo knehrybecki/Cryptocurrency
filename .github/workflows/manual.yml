@@ -2,8 +2,8 @@ name: Render video Manual
 on:
   workflow_dispatch:
 jobs:
-  render:
-    name: Render video
+  lanuchServ:
+    name: node
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
@@ -13,9 +13,18 @@ jobs:
       - run: npm i
       - name: create env file
         run: |
-          node getPriceFromAPIweb.js
           touch .env
           echo CRYPTOCURRENCY_API_KEY=${{ secrets.CRYPTOCURRENCY_API_KEY }} >> .env
+      - run: node getPriceFromAPIweb.js
+  render:
+    name: Render video
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@main
+      - run: sudo apt update
+      - run: sudo apt install ffmpeg
+      - run: npm i
       - run: npm run build
         env:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}
