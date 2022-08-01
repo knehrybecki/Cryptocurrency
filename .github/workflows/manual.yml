@@ -11,11 +11,11 @@ jobs:
       - run: sudo apt update
       - run: sudo apt install ffmpeg
       - run: npm i
-      - run: node getPriceFromAPIweb.js
       - name: create env file
         run: |
           touch .env
           echo CRYPTOCURRENCY_API_KEY=${{ secrets.CRYPTOCURRENCY_API_KEY }} >> .env
+      - run: node getPriceFromAPIweb.j
       - run: npm run build
         env:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}
