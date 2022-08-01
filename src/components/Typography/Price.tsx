@@ -1,7 +1,7 @@
 import { interpolate, useCurrentFrame } from 'remotion'
 import styled from 'styled-components'
 import { COMPOSITION_CONFIG } from '../../config'
-import { useTranslations } from '../../hooks.ts'
+import { useTranslations } from '../../hooks'
 
 type PriceProps = {
 	children: React.ReactNode

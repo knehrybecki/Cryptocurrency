@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { CardanoAda, Title, VideoBackground } from '../components'
 import { Copyright } from '../components/Copyright'
 import { Price } from '../components/Typography/Price'
-import { useTranslations } from '../hooks.ts'
+import { useTranslations } from '../hooks'
 
 type AdaProps = {
 	price: number

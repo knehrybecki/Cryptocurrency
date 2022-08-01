@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { APP_CONFIG } from '../config'
-import { useTranslations } from '../hooks.ts'
+import { useTranslations } from '../hooks'
 
 export const Copyright: React.FunctionComponent = () => {
 	const T = useTranslations()

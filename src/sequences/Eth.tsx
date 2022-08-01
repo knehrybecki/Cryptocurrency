@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Etherum, Title, VideoBackground } from '../components'
 import { Price } from '../components/Typography'
-import { useTranslations } from '../hooks.ts'
+import { useTranslations } from '../hooks'
 
 type EthProps = {
 	price: number

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Title, VideoBackground } from '../components'
 import { DogeCoin } from '../components/DogeCoin'
 import { Price } from '../components/Typography'
-import { useTranslations } from '../hooks.ts'
+import { useTranslations } from '../hooks'
 
 type DogeProps = {
 	price: number
