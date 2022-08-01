@@ -15,10 +15,10 @@ jobs:
         run: |
           touch .env
           echo CRYPTOCURRENCY_API_KEY=${{ secrets.CRYPTOCURRENCY_API_KEY }} >> .env
-      - run: node getPriceFromAPIweb.js
       - run: npm run build
         env:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}
+      - run: node getPriceFromAPIweb.js
       - uses: actions/upload-artifact@v2
         with:
           name: video.mp4
