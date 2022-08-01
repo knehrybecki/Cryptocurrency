@@ -1,5 +1,8 @@
-import { Composition } from 'remotion'
+import { useEffect, useState } from 'react'
+import { Composition, continueRender, delayRender } from 'remotion'
+import { fetchCryptoPrices, ListPrices } from './actions'
 import { Cryptocurrency } from './components'
+
 import { VIDEO_CONFIG } from './config'
 import './reset.css'
 
@@ -12,7 +15,24 @@ export const RemotionVideo: React.FunctionComponent = () => {
 		VIDEO_WIDTH,
 	} = VIDEO_CONFIG
 
-	return (
+	const [handle] = useState(() => delayRender())
+	const [isReadyToRender, setIsReadyToRender] = useState(false)
+	const [cryptoPrices, setCryptoPrices] = useState({})
+
+	const fetchListPrice = async () => {
+		const listCryptoPrices = await fetchCryptoPrices()
+
+		setCryptoPrices(listCryptoPrices)
+		setIsReadyToRender(true)
+		continueRender(handle)
+	}
+
+	useEffect(() => {
+		fetchListPrice()
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
+
+	return isReadyToRender ? (
 		<>
 			<Composition
 				id={VIDEO_ID}
@@ -21,7 +41,10 @@ export const RemotionVideo: React.FunctionComponent = () => {
 				fps={FPS}
 				width={VIDEO_WIDTH}
 				height={VIDEO_HEIGHT}
+				defaultProps={{
+					listPrices: cryptoPrices as ListPrices,
+				}}
 			/>
 		</>
-	)
+	) : null
 }

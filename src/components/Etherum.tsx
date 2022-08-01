@@ -3,21 +3,21 @@ import styled from 'styled-components'
 import { Images } from '../assets'
 import { ContainerAnimated } from './ContainerAnimated'
 
-type BitCoinProps = {
+type EtherumProps = {
 	children: React.ReactNode
 }
 
-export const BitCoin: React.FunctionComponent<BitCoinProps> = ({
+export const Etherum: React.FunctionComponent<EtherumProps> = ({
 	children,
 }) => {
 	return (
 		<ContainerAnimated>
-			<BitCoins src={Images.BTC} />
+			<Eth src={Images.ETH} />
 			{children}
 		</ContainerAnimated>
 	)
 }
 
-const BitCoins = styled(Img)`
-	width: 220px;
+const Eth = styled(Img)`
+	width: 150px;
 `

@@ -1,22 +1,22 @@
 import styled from 'styled-components'
-import { BitCoin, Title, VideoBackground } from '../components'
+import { RippleXrp, Title, VideoBackground } from '../components'
 import { Price } from '../components/Typography'
 import { useTranslations } from '../hooks.ts'
 
-type BtcProps = {
+type XrpProps = {
 	price: number
 }
 
-export const Btc: React.FunctionComponent<BtcProps> = ({ price }) => {
+export const Xrp: React.FunctionComponent<XrpProps> = ({price}) => {
 	const T = useTranslations()
 
 	return (
 		<VideoBackground>
 			<Container>
-				<BitCoin>
-					<Title>{T.Btc.title}</Title>
-				</BitCoin>
-				<Price>{price}</Price>
+				<RippleXrp>
+					<Title>{T.Xrp.title}</Title>
+				</RippleXrp>
+				<Price> {price}</Price>
 			</Container>
 		</VideoBackground>
 	)
