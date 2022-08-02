@@ -7,7 +7,7 @@ export type ListPrices = {
 }
 
 export const fetchCryptoPrices = async () => {
-	const listCrypto = await fetch('http://localhost:3005/price')
+	const listCrypto = await fetch('http://127.0.0.2:3005/price')
 		.then(response => response.json())
 		.then((data: ListPrices) => data)
 	    .catch(() => {
