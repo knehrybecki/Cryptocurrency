@@ -1,2 +1,2 @@
-export { Title } from './Title';
-export { Price } from './Price';
+export { Price } from './Price'
+export { Title } from './Title'

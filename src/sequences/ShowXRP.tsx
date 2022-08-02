@@ -7,7 +7,7 @@ type XrpProps = {
 	price: number
 }
 
-export const Xrp: React.FunctionComponent<XrpProps> = ({price}) => {
+export const ShowXRP: React.FunctionComponent<XrpProps> = ({price}) => {
 	const T = useTranslations()
 
 	return (

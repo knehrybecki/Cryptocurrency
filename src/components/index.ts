@@ -1,9 +1,11 @@
 export { BitCoin } from './BitCoin'
 export { CardanoAda } from './CardanoAda'
 export { ContainerAnimated } from './ContainerAnimated'
+export { Copyright } from './Copyright'
 export { Cryptocurrency } from './Cryptocurrency'
 export { DogeCoin } from './DogeCoin'
 export { Etherum } from './Etherum'
 export { RippleXrp } from './RippleXrp'
 export { Title } from './Typography/Title'
 export { VideoBackground } from './VideoBackground'
+

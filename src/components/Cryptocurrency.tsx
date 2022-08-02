@@ -1,6 +1,12 @@
 import { Sequence, useVideoConfig } from 'remotion'
 import { ListPrices } from '../actions'
-import { Ada, Btc, Doge, Eth, Xrp } from '../sequences'
+import {
+	ShowADA,
+	ShowBTC,
+	ShowDOGE,
+	ShowETH,
+	ShowXRP,
+} from '../sequences'
 
 enum SymbolCrypto {
 	BTC = 'BTC',
@@ -25,31 +31,31 @@ export const Cryptocurrency: React.FunctionComponent<
 				from={0}
 				durationInFrames={2 * fps}
 				name={SymbolCrypto.BTC}>
-				<Btc price={BTC} />
+				<ShowBTC price={BTC} />
 			</Sequence>
 			<Sequence
 				from={2 * fps}
 				durationInFrames={2 * fps}
 				name={SymbolCrypto.ETH}>
-				<Eth price={ETH} />
+				<ShowETH price={ETH} />
 			</Sequence>
 			<Sequence
 				from={4 * fps}
 				durationInFrames={2 * fps}
 				name={SymbolCrypto.XRP}>
-				<Xrp price={XRP} />
+				<ShowXRP price={XRP} />
 			</Sequence>
 			<Sequence
 				from={6 * fps}
 				durationInFrames={2 * fps}
 				name={SymbolCrypto.DOGE}>
-				<Doge price={DOGE} />
+				<ShowDOGE price={DOGE} />
 			</Sequence>
 			<Sequence
 				from={8 * fps}
 				durationInFrames={2 * fps}
 				name={SymbolCrypto.ADA}>
-				<Ada price={ADA} />
+				<ShowADA price={ADA} />
 			</Sequence>
 		</>
 	)

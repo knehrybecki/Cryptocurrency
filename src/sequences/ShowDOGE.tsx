@@ -1,21 +1,21 @@
 import styled from 'styled-components'
-import { Etherum, Title, VideoBackground } from '../components'
+import { DogeCoin, Title, VideoBackground } from '../components'
 import { Price } from '../components/Typography'
 import { useTranslations } from '../hooks'
 
-type EthProps = {
+type DogeProps = {
 	price: number
 }
 
-export const Eth: React.FunctionComponent<EthProps> = ({ price }) => {
+export const ShowDOGE: React.FunctionComponent<DogeProps> = ({price}) => {
 	const T = useTranslations()
 
 	return (
 		<VideoBackground>
 			<Container>
-				<Etherum>
-					<Title>{T.Eth.title}</Title>
-				</Etherum>
+				<DogeCoin>
+					<Title>{T.Doge.title}</Title>
+				</DogeCoin>
 				<Price>{price}</Price>
 			</Container>
 		</VideoBackground>

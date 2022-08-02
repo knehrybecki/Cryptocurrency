@@ -1,23 +1,23 @@
 import styled from 'styled-components'
-import { Title, VideoBackground } from '../components'
-import { DogeCoin } from '../components/DogeCoin'
-import { Price } from '../components/Typography'
+import { CardanoAda, Title, VideoBackground, Copyright } from '../components'
+import { Price } from '../components/Typography/Price'
 import { useTranslations } from '../hooks'
 
-type DogeProps = {
+type AdaProps = {
 	price: number
 }
 
-export const Doge: React.FunctionComponent<DogeProps> = ({price}) => {
+export const ShowADA: React.FunctionComponent<AdaProps> = ({ price }) => {
 	const T = useTranslations()
 
 	return (
 		<VideoBackground>
 			<Container>
-				<DogeCoin>
-					<Title>{T.Doge.title}</Title>
-				</DogeCoin>
+				<CardanoAda>
+					<Title>{T.Ada.title}</Title>
+				</CardanoAda>
 				<Price>{price}</Price>
+				<Copyright />
 			</Container>
 		</VideoBackground>
 	)

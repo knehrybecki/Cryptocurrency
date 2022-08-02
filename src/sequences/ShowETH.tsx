@@ -1,21 +1,21 @@
 import styled from 'styled-components'
-import { BitCoin, Title, VideoBackground } from '../components'
+import { Etherum, Title, VideoBackground } from '../components'
 import { Price } from '../components/Typography'
 import { useTranslations } from '../hooks'
 
-type BtcProps = {
+type EthProps = {
 	price: number
 }
 
-export const Btc: React.FunctionComponent<BtcProps> = ({ price }) => {
+export const ShowETH: React.FunctionComponent<EthProps> = ({ price }) => {
 	const T = useTranslations()
 
 	return (
 		<VideoBackground>
 			<Container>
-				<BitCoin>
-					<Title>{T.Btc.title}</Title>
-				</BitCoin>
+				<Etherum>
+					<Title>{T.Eth.title}</Title>
+				</Etherum>
 				<Price>{price}</Price>
 			</Container>
 		</VideoBackground>
