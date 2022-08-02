@@ -6,6 +6,7 @@ import fetch from 'node-fetch'
 const app = express()
 app.use(cors())
 app.use(express.json())
+
 const hostname = "127.0.0.2"
 const port = 3005
 
@@ -51,8 +52,3 @@ app.get('/price', (req, res) => {
 app.listen(port,hostname, () => {
     console.log(`Example app listening on port ${ port } and run on ${ hostname }`)
 })
-
-// setTimeout(() => {
-//     // eslint-disable-next-line no-undef
-//     process.exit()
-// }, 10000)
