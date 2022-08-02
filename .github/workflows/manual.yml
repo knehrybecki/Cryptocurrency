@@ -4,7 +4,7 @@ on:
 jobs:
   lanuchServ:
     name: node
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
       - uses: actions/setup-node@main
@@ -16,7 +16,7 @@ jobs:
       - run: node getPriceFromAPIweb.js
   render:
     name: Render video
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
       - uses: actions/setup-node@main
